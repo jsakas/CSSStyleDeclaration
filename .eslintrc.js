@@ -8,12 +8,9 @@ module.exports = {
   },
   env: {
     es6: true,
+    node: true,
   },
   globals: {
-    exports: true,
-    module: true,
-    require: true,
-    window: true,
     describe: true,
     it: true,
     test: true,
@@ -34,7 +31,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['lib/implementedProperties.js', 'lib/properties.js'],
+      files: ['lib/implementedProperties.js'],
       rules: {
         'prettier/prettier': 'off',
       },
@@ -47,9 +44,6 @@ module.exports = {
     },
     {
       files: ['scripts/**/*', 'tests/**/*'],
-      env: {
-        node: true,
-      },
     },
   ],
 };
